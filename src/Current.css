@@ -1,0 +1,49 @@
+#cityName {
+  margin-left: 25px;
+  margin-bottom: 0;
+}
+#tempCurrent {
+  margin-left: 25px;
+  margin-bottom: 0;
+}
+h1 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-right: 25px;
+}
+
+#enterCity {
+  padding: 20px;
+}
+
+#city-input {
+  background-color: #f2f1f1;
+}
+
+#button-search {
+  background-color: #3a929e;
+}
+
+#button-local {
+  background-color: white;
+  color: #3a929e;
+}
+
+.temptype,
+.divider {
+  font-size: 20px;
+  position: relative;
+  top: -15px;
+}
+
+.temptype {
+  text-decoration: none;
+}
+
+.currentinfo {
+  display: block;
+  margin-left: 25px;
+  margin-top: 0;
+  font-size: 14px;
+  color: #3a929e;
+}

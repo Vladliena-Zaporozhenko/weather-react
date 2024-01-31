@@ -1,0 +1,16 @@
+body {
+  text-align: center;
+}
+.forecastDay {
+  padding: 5px;
+  border: 1px solid #3a929e;
+  border-radius: 7px;
+  text-align: center;
+}
+.day {
+  color: #3a929e;
+}
+
+.forecastTemp {
+  font-size: 13px;
+}

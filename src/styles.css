@@ -1,0 +1,22 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.container {
+  text-align: left;
+}
+
+.weather-wrapper {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 5px;
+  border: 1px solid #3a929e;
+  border-radius: 20px;
+  background-color: rgba(253, 255, 253, 0.75);
+}
+
+.forecastInfo {
+  display: flex;
+  justify-content: space-evenly;
+}
