@@ -20,3 +20,8 @@
   display: flex;
   justify-content: space-evenly;
 }
+#linkCode {
+  text-align: center;
+  margin-top: -10px;
+  font-size: small;
+}

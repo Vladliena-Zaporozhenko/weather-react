@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
+import FormattedDate from "./FormattedDate";
 
 import "./styles.css";
 
@@ -19,6 +20,7 @@ export default function SearchEngine() {
     setDescription(response.data.weather[0].description);
     setHumidity(response.data.main.humidity);
     setWind(response.data.wind.speed);
+
     setIcon(
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
@@ -44,7 +46,7 @@ export default function SearchEngine() {
               type="text"
               className="form-control entercity"
               placeholder="Enter a city..."
-              autoComplete="off"
+              autoFocus="on"
               id="city-input"
             />
           </div>
@@ -65,29 +67,38 @@ export default function SearchEngine() {
 
   if (loaded) {
     return (
-      <div>
+      <div className="currentinfo">
         {form}
         <div className="row">
-          <div className="col-7">
-            <h3 id="cityName">
+          <div className="col-6">
+            <h3 className="text-capitalize" id="cityName">
               <strong>{city}</strong>
             </h3>
             <div>
-              <p className="currentinfo">
-                <span id="currentDayTime">Current day and time, </span>
-                <span id="condition">{description}</span>
-                <br />
-                Humidity: {humidity}%, Wind: {wind}km/h
+              <p id="currentDayTime">
+                <FormattedDate date={new Date()} />
               </p>
             </div>
           </div>
-          <div className="col-7" id="tempCurrent">
-            <div>
-              <h1>
-                <img src={icon} alt="weatherIcon" />
-                <span id="tempNow">{Math.round(temperature)}°C</span>
-              </h1>
-            </div>
+        </div>
+        <div className="row">
+          <div className="col-6" id="tempCurrent">
+            <h1>
+              <img src={icon} alt="weatherIcon" />
+              <span id="tempNow">{Math.round(temperature)}</span>
+              <span className="unit">°C</span>
+            </h1>
+          </div>
+          <div className="col-5">
+            <ul id="tempCurrent">
+              <li className="text-capitalize">{description}</li>
+              <li>
+                Humidity: <strong>{humidity}</strong>%
+              </li>
+              <li>
+                Wind: <strong>{wind}</strong> km/h
+              </li>
+            </ul>
           </div>
         </div>
       </div>

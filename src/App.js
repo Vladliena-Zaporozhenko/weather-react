@@ -19,6 +19,18 @@ export default function App() {
           <Forecast />
         </span>
       </div>
+      <footer>
+        <div id="linkCode">
+          <a
+            href="https://github.com/Vladliena-Zaporozhenko/weather-react"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open-source code
+          </a>
+          , by Vladliena Zaporozhenko
+        </div>
+      </footer>
     </div>
   );
 }
