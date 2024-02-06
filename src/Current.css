@@ -8,11 +8,10 @@
 }
 #tempNow {
   font-size: 64px;
+  margin-left: 15px;
+  margin-top: -25px;
 }
 
-.currentinfo img {
-  margin-bottom: 20px;
-}
 .currentinfo .unit {
   font-size: 20px;
   position: relative;

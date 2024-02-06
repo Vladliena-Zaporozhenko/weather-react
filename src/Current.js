@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
 import FormattedDate from "./FormattedDate";
+import WeatherTemperature from "./WeatherTemperature";
+import Icons from "./Icons";
 
 import "./styles.css";
 
@@ -20,10 +22,7 @@ export default function SearchEngine() {
     setDescription(response.data.weather[0].description);
     setHumidity(response.data.main.humidity);
     setWind(response.data.wind.speed);
-
-    setIcon(
-      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-    );
+    setIcon(response.data.weather[0].icon);
   }
 
   function handleSubmit(event) {
@@ -83,11 +82,15 @@ export default function SearchEngine() {
         </div>
         <div className="row">
           <div className="col-6" id="tempCurrent">
-            <h1>
-              <img src={icon} alt="weatherIcon" />
-              <span id="tempNow">{Math.round(temperature)}</span>
-              <span className="unit">°C</span>
-            </h1>
+            <div className="d-flex">
+              <div>
+                <Icons code={icon} size={52} />
+              </div>
+
+              <div id="tempNow">
+                <WeatherTemperature celsius={temperature} />
+              </div>
+            </div>
           </div>
           <div className="col-5">
             <ul id="tempCurrent">
