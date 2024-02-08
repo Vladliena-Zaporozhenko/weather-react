@@ -1,16 +1,17 @@
-body {
+.WeatherForecast {
   text-align: center;
-}
-.forecastDay {
-  padding: 5px;
-  border: 1px solid #3a929e;
-  border-radius: 7px;
-  text-align: center;
-}
-.day {
-  color: #3a929e;
 }
 
-.forecastTemp {
-  font-size: 13px;
+.WeatherForecast-temperature-min {
+  margin-left: 5px;
+}
+.WeatherForecast-day {
+  margin-bottom: 5px;
+}
+.ForecastDay {
+  margin: 20px auto;
+  text-align: center;
+  padding: 15px;
+  border-radius: 4px;
+  background-color: rgba(253, 255, 253, 0.5);
 }

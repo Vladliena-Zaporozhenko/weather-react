@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import FormattedDate from "./FormattedDate";
 import WeatherTemperature from "./WeatherTemperature";
 import Icons from "./Icons";
+import Forecast from "./Forecast";
 
 import "./styles.css";
 
@@ -15,6 +16,7 @@ export default function SearchEngine() {
   let [humidity, setHumidity] = useState(null);
   let [wind, setWind] = useState(null);
   let [icon, setIcon] = useState("");
+  let [coordinates, setCoordinates] = useState(null);
 
   function showWeather(response) {
     setLoaded(true);
@@ -23,6 +25,7 @@ export default function SearchEngine() {
     setHumidity(response.data.main.humidity);
     setWind(response.data.wind.speed);
     setIcon(response.data.weather[0].icon);
+    setCoordinates(response.data.coord);
   }
 
   function handleSubmit(event) {
@@ -104,6 +107,7 @@ export default function SearchEngine() {
             </ul>
           </div>
         </div>
+        <Forecast coordinates={coordinates} />
       </div>
     );
   } else {

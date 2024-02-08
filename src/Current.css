@@ -15,16 +15,16 @@
 .currentinfo .unit {
   font-size: 20px;
   position: relative;
-
   top: -34px;
   margin-left: 5px;
 }
+
 #enterCity {
   padding: 20px;
 }
 
 #city-input {
-  background-color: #f2f1f1;
+  background-color: rgba(253, 255, 253, 0.5);
 }
 
 #button-search {
@@ -50,6 +50,7 @@
 .currentinfo {
   display: block;
   margin-left: 25px;
+  margin-right: 25px;
   margin-top: 0;
   font-size: 14px;
   color: #2d737c;
